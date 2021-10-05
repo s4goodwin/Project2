@@ -6,18 +6,21 @@ public class ShippingAddress {
     private String City;
     private String State;
     private String PostalCode;
+    private String EntireAddress;
 
-    public ShippingAddress(String line1, String line2, String cityName, String stateName, String zipCode){
+    public ShippingAddress(String line1, String line2, String cityName, String stateName, String zipCode, String wholeAddress){
         AddressLine1 = line1;
         AddressLine2 = line2;
         City = cityName;
         State = stateName;
         PostalCode = zipCode;
+        EntireAddress = wholeAddress;
     }
 
     public String toString() {
         var wholeAddress = AddressLine1 +"\n"+ AddressLine2;
-        return wholeAddress;
+        String wholeAddress1 = wholeAddress;
+        return wholeAddress1;
     }
 
 }

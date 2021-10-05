@@ -9,6 +9,10 @@ public class Store {
     public Store (){
         Orders = new ArrayList<Order>();
         Customers = new ArrayList<Customer>();
+        var filename = "Customers.txt";
+
+
     }
+    public  (String [] args)
 
 }
