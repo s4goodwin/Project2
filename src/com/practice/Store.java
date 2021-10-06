@@ -3,6 +3,7 @@ package com.practice;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
@@ -20,15 +21,15 @@ public class Store {
         List<String> lines = Collections.emptyList();
 
         try {
-            lines = Files.readAllLines(Paths.get("Customers.txt"));
+            lines = Files.readAllLines(Paths.get("Customers.txt"), StandardCharsets.UTF_8);
         } catch (IOException e) {
             e.printStackTrace();
         }
         String[]names = lines.get(0).split(",");
-        Consumer<? super String> customerName;
-        Arrays.asList(names).forEach();{
-            Customers.add(new Customer(names));
-            System.out.println(Customers);
-        }
+//        Consumer<? super String> customerName;
+//        Arrays.asList(names).forEach(customerName);{
+//            Customers.add(new Customer(names));
+//            System.out.println(Customers);
+//        }
     }
 }

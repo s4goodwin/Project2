@@ -1,7 +1,5 @@
 package com.practice;
 
-import org.w3c.dom.ls.LSOutput;
-
 public class Order {
     private String destination;
     private String orderedBy;
@@ -11,10 +9,11 @@ public class Order {
         orderedBy = customer;
     }
 
-
-
-    public ShippingAddress getDestination(String shippingAddress){
-        return null;
+    public String getDestination(){
+        return destination.toString();
+    }
+    public String getOrderedBy(){
+        return orderedBy.toString();
     }
 }
 

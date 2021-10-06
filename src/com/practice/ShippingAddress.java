@@ -8,6 +8,7 @@ public class ShippingAddress {
     private String PostalCode;
     private String EntireAddress;
 
+
     public ShippingAddress(String line1, String line2, String cityName, String stateName, String zipCode, String wholeAddress){
         AddressLine1 = line1;
         AddressLine2 = line2;
@@ -21,6 +22,8 @@ public class ShippingAddress {
         var wholeAddress = AddressLine1 +"\n"+ AddressLine2;
         String wholeAddress1 = wholeAddress;
         return wholeAddress1;
+
+
     }
 
 }
