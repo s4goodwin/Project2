@@ -1,12 +1,12 @@
 package com.practice;
 
 public class Order {
-    private String destination;
-    private String orderedBy;
+    private ShippingAddress destination;
+    private Customer orderedBy;
 
-    public Order(String shippingAddress, String customer) {
-        destination = shippingAddress;
-        orderedBy = customer;
+    public Order(ShippingAddress Destination, Customer OrderedBy) {
+        destination = Destination;
+        orderedBy = OrderedBy;
     }
 
     public String getDestination(){
