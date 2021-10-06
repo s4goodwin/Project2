@@ -34,6 +34,7 @@ public class Store {
                     break;
                 case 2:
 
+
             }
         }
     }
@@ -53,12 +54,10 @@ public class Store {
         Customers.add(newCustomerName);
     }
 
-    private Optional<Customer> selectCustomer(String){
-        for(var currentCustomer : Customers){
-            if(currentCustomer.get)
-        }
+    private void selectCustomer(Scanner inputReader){
+        inputReader.nextLine();
+        System.out.println("What is the first and last name of the customer you are trying to select: ");
+        var nameToFind = inputReader.nextLine();
 
-        var nameToFind = inputReader.next();
-        return nameToFind;
     }
 }
