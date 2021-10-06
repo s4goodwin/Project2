@@ -22,4 +22,31 @@ public class Store {
         }
     return Customers;
     }
+
+    public void runStore(){
+        var inputReader = new Scanner(System.in);
+        while(true){
+            printMenu();
+            var userChoice = inputReader.nextInt();
+            switch (userChoice){
+                case 1:
+
+            }
+        }
+    }
+    private void printMenu(){
+        System.out.println("======================");
+        System.out.println("What would you like to do?");
+        System.out.println("   [1] Add customer");
+        System.out.println("   [2] Select customer");
+        System.out.println("   [3] Exit the program");
+        System.out.println("======================");
+    }
+
+    private void addCustomer(Scanner inputReader){
+        inputReader.nextLine();
+        System.out.println("Enter the new customers name: ");
+        var newCustomerName = inputReader.nextLine();
+        Customers.add(newCustomerName);
+    }
 }
