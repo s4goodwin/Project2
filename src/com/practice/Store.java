@@ -30,6 +30,9 @@ public class Store {
             var userChoice = inputReader.nextInt();
             switch (userChoice){
                 case 1:
+                    addCustomer(inputReader);
+                    break;
+                case 2:
 
             }
         }
@@ -48,5 +51,14 @@ public class Store {
         System.out.println("Enter the new customers name: ");
         var newCustomerName = inputReader.nextLine();
         Customers.add(newCustomerName);
+    }
+
+    private Optional<Customer> selectCustomer(String){
+        for(var currentCustomer : Customers){
+            if(currentCustomer.get)
+        }
+
+        var nameToFind = inputReader.next();
+        return nameToFind;
     }
 }
