@@ -19,7 +19,7 @@ public class ShippingAddress {
     }
 
     public String toString() {
-        var wholeAddress = AddressLine1 +"\n"+ AddressLine2;
+        var wholeAddress = AddressLine1 +"\n"+ AddressLine2 +"\n"+ City+"\n"+State+"\n"+PostalCode;
         String wholeAddress1 = wholeAddress;
         return wholeAddress1;
 

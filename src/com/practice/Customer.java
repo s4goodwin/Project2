@@ -17,5 +17,13 @@ public class Customer {
         return name;
     }
 
-    public addAddress
+    public void addAddress (ShippingAddress newAddress){
+        Addresses.add(newAddress);
+    }
+
+    public String toString(){
+        var customer = name + Addresses;
+        String customer1 = customer;
+        return customer1;
+    }
 }
