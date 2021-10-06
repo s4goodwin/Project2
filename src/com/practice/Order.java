@@ -4,9 +4,9 @@ public class Order {
     private ShippingAddress destination;
     private Customer orderedBy;
 
-    public Order(ShippingAddress Destination, Customer OrderedBy) {
-        destination = Destination;
-        orderedBy = OrderedBy;
+    public Order(ShippingAddress destination, Customer orderedBy) {
+        this.destination = destination;
+        this.orderedBy = orderedBy;
     }
 
     public String getDestination(){
