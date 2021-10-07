@@ -9,6 +9,11 @@ public class Store {
     private ArrayList<String> Customers;
     private Scanner scanner;
 
+    public static void main(String args){
+        Store store = new Store();
+        store.runStore();
+    }
+
     public List<String> Store(String[] args) throws FileNotFoundException {
         //scanner = new Scanner(new File(""));
         Orders = new ArrayList<Order>();
@@ -51,12 +56,22 @@ public class Store {
                     addAddress(inputReader2);
                     break;
                 case 2:
-
+                    makeOrder(inputReader2);
+                    break;
             }
         }
     }
 
-    private Order makeOrder()
+    private void makeOrder(Scanner inputReader2) {
+        for (var addressList : Customers){
+            var orderCustomer = getCustomer(addressList);
+            if(orderCustomer.isPresent()){
+                return;
+            }
+            else System.out.println("No known customer exists");
+    }
+
+    }
 
 
     private void printrunStoreMenu(){
@@ -86,7 +101,7 @@ public class Store {
 
     private void addAddress(Scanner inputReader){
         inputReader.nextLine();
-        System.out.println("Enter the new customers name: ");
+        System.out.println("Enter the new customers address: ");
         var newCustomerAddress = inputReader.nextLine();
         Customers.add(newCustomerAddress);
     }
