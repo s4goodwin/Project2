@@ -58,6 +58,8 @@ public class Store {
                 case 2:
                     makeOrder(inputReader2);
                     break;
+                case 3:
+                    System.exit(0);
             }
         }
     }
