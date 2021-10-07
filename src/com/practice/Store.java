@@ -33,8 +33,10 @@ public class Store {
                     addCustomer(inputReader);
                     break;
                 case 2:
-
-
+                    selectCustomer(inputReader);
+                    break;
+                case 3:
+                    System.exit(0);
             }
         }
     }
@@ -58,6 +60,18 @@ public class Store {
         inputReader.nextLine();
         System.out.println("What is the first and last name of the customer you are trying to select: ");
         var nameToFind = inputReader.nextLine();
+        var customer = getCustomer(nameToFind);
+        if(customer.isPresent()){
+            return;
+        }
+        else System.out.println("No known customer exists");
+    }
 
+    private Optional<String> getCustomer(String customerName){
+        for(var currentCustomer : Customers){
+            if(currentCustomer==customerName)
+                return Optional.of(currentCustomer);
+        }
+        return Optional.empty();
     }
 }
