@@ -18,9 +18,9 @@ public class Order {
     }
 
     public String OrderDest () {
-        var OrderDest = orderedBy+"\n"+destination;
-        String OrderDest1 = OrderDest;
-        return OrderDest1.toString();
+        var OrderDestination = orderedBy+"\n"+destination;
+        String OrderDest = OrderDestination;
+        return OrderDest.toString();
     }
 }
 

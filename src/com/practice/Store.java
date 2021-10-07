@@ -26,7 +26,7 @@ public class Store {
     public void runStore(){
         var inputReader = new Scanner(System.in);
         while(true){
-            printMenu();
+            printrunStoreMenu();
             var userChoice = inputReader.nextInt();
             switch (userChoice){
                 case 1:
@@ -40,11 +40,39 @@ public class Store {
             }
         }
     }
-    private void printMenu(){
+
+    public void manageCustomer(Customer selectedCustomer){
+        var inputReader2 = new Scanner(System.in);
+        while (true){
+            printmanageCustomerMenu();
+            var userChoice2 = inputReader2.nextInt();
+            switch (userChoice2){
+                case 1:
+                    addAddress(inputReader2);
+                    break;
+                case 2:
+
+            }
+        }
+    }
+
+    private Order makeOrder()
+
+
+    private void printrunStoreMenu(){
         System.out.println("======================");
         System.out.println("What would you like to do?");
         System.out.println("   [1] Add customer");
         System.out.println("   [2] Select customer");
+        System.out.println("   [3] Exit the program");
+        System.out.println("======================");
+    }
+
+    private void printmanageCustomerMenu(){
+        System.out.println("======================");
+        System.out.println("What would you like to do?");
+        System.out.println("   [1] Add address");
+        System.out.println("   [2] Make order");
         System.out.println("   [3] Exit the program");
         System.out.println("======================");
     }
@@ -54,6 +82,13 @@ public class Store {
         System.out.println("Enter the new customers name: ");
         var newCustomerName = inputReader.nextLine();
         Customers.add(newCustomerName);
+    }
+
+    private void addAddress(Scanner inputReader){
+        inputReader.nextLine();
+        System.out.println("Enter the new customers name: ");
+        var newCustomerAddress = inputReader.nextLine();
+        Customers.add(newCustomerAddress);
     }
 
     private void selectCustomer(Scanner inputReader){
@@ -74,4 +109,6 @@ public class Store {
         }
         return Optional.empty();
     }
+
+
 }
